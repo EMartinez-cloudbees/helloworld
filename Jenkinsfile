@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('BuzzBuild') {
       steps {
-        echo 'Buzz'
         timeout(time: 1, activity: true)
+        echo 'buzz'
       }
     }
 
