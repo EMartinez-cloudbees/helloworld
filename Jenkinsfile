@@ -1,9 +1,10 @@
 pipeline {
-  agent any
+  agent none
+  options { timeout(time: 1, unit: 'MINUTES') }
   stages {
     stage('BuzzBuild') {
+      agent any      
       steps {
-        timeout(time: 1, activity: true)
         echo 'buzz'
       }
     }
