@@ -27,3 +27,15 @@ pipeline {
     timeout(time: 1, unit: 'MINUTES')
   }
 }
+pipeline {
+  stages {
+      stage('Stage one') {
+      steps {
+        echo 'From a different pipeline'
+      }
+    }
+  }
+  options {
+    timeout(time: 1, unit: 'MINUTES')
+  }
+}  
