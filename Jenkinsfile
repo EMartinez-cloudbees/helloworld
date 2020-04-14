@@ -9,12 +9,14 @@ pipeline {
     }
 
     stage('BuzzUnitTest') {
+      agent any
       steps {
         echo 'Buzz unit testing'
       }
     }
 
     stage('BuzzRegressionTest') {
+      agent any
       steps {
         echo 'Buzz regression test'
         echo 'xml to Junit'
@@ -28,8 +30,10 @@ pipeline {
   }
 }
 pipeline {
+  agent none
   stages {
       stage('Stage one') {
+      agent any  
       steps {
         echo 'From a different pipeline'
       }
